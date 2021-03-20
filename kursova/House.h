@@ -8,23 +8,12 @@ private:
 	double yardSize;
 
 public:
-	void printEstate() {
-		cout << "Address: " << address << endl
-			<< "Owner: " << owner << endl
-			<< "Price: " << price << endl
-			<< "Size: " << size << endl
-			<< "Room: " << room << endl
-			<< "Flor: " << floor << endl
-			<< "YardSize: " << yardSize << endl
-			<< endl;
-	}
+	House(string Address, string Owner, int Price, double Size, int Room, int Floor, double YardSize);
 
-	void setYardSize(const double& YardSize) {
-		yardSize = YardSize;
-	}
+	void printEstate();
 
-	const double& getYardSize() const {
-		return yardSize;
-	}
+	void setYardSize(const double& YardSize);
+
+	const double& getYardSize() const;
 };
 

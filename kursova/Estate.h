@@ -9,57 +9,26 @@ protected:
 	int price;
 	double size;
 
-
-
 public:
-	Estate() {
-		address = "Shumen";
-		owner = "Mihail";
-		price = 50000;
-		size = 80.00;
-	}
+	Estate();
 
-	Estate(string Address, string Owner, int Price, double Size) {
-		address = address;
-		owner = owner;
-		price = price;
-		size = size;
-	}
+	Estate(string Address, string Owner, int Price, double Size);
 
-	Estate(const Estate& other) {
-		address = other.address;
-		owner = other.owner;
-		price = other.price;
-		size = other.size;
-	}
+	Estate(const Estate& other);
 
-	const string& getAddress() const {
-		return address;
-	}
+	const string& getAddress() const;
 
-	const int& getPrice() const {
-		return price;
-	}
+	const int& getPrice() const;
 
-	const double& getSize() const {
-		return size;
-	}
+	const double& getSize() const;
 
-	void setPrice(const int& Price) {
-		price = Price;
-	}
+	void setPrice(const int& Price);
 
-	void setAddress(const string& Address) {
-		address = Address;
-	}
+	void setAddress(const string& Address);
 
-	void setOwner(const string& Owner) {
-		owner = Owner;
-	}
+	void setOwner(const string& Owner);
 
-	void setSize(const double& Size) {
-		size = size;
-	}
+	void setSize(const double& Size);
 
 	virtual void printEstate() = 0;
 };
