@@ -33,6 +33,9 @@
     <ClCompile Include="Plot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RealEstate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Estate.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Plot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RealEstate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

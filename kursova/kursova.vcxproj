@@ -147,6 +147,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Plot.cpp" />
+    <ClCompile Include="RealEstate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Estate.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="House.h" />
     <ClInclude Include="kursova.h" />
     <ClInclude Include="Plot.h" />
+    <ClInclude Include="RealEstate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
