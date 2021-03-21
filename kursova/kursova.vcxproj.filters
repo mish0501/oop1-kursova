@@ -18,9 +18,6 @@
     <ClCompile Include="kursova.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="other.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Estate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -46,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleBroker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VIPBroker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SimpleBroker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VIPBroker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

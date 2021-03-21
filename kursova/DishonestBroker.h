@@ -1,18 +1,11 @@
 #pragma once
-#include "Broker.h"
+#include "VIPBroker.h"
 class DishonestBroker :
-    public Broker
+    public VIPBroker
 {
-private:
-	RealEstate* vip;
-
 public:
 	DishonestBroker();
 
 	DishonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates);
-
-	void addVIP(Estate* estate);
-
-	void deleteVIP(Estate* estate);
 };
 

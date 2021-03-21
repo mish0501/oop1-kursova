@@ -1,17 +1,7 @@
 #include "DishonestBroker.h"
 
-DishonestBroker::DishonestBroker() : Broker() {
-	vip = new RealEstate();
-}
+DishonestBroker::DishonestBroker() : 
+	VIPBroker() {}
 
-DishonestBroker::DishonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates) : Broker(Name, Percent, Estates) {
-	vip = vipEstates;
-}
-
-void DishonestBroker::addVIP(Estate* estate) {
-	vip->registerEstate(estate);
-}
-
-void DishonestBroker::deleteVIP(Estate* estate) {
-	vip->deleteEstate(estate);
-}
+DishonestBroker::DishonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates) : 
+	VIPBroker(Name, Percent, Estates, vipEstates) {}
