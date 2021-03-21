@@ -139,8 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Broker.cpp" />
+    <ClCompile Include="DishonestBroker.cpp" />
     <ClCompile Include="Estate.cpp" />
     <ClCompile Include="Flat.cpp" />
+    <ClCompile Include="HonestBroker.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="kursova.cpp" />
     <ClCompile Include="other.cpp">
@@ -148,14 +151,19 @@
     </ClCompile>
     <ClCompile Include="Plot.cpp" />
     <ClCompile Include="RealEstate.cpp" />
+    <ClCompile Include="SimpleBroker.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Broker.h" />
+    <ClInclude Include="DishonestBroker.h" />
     <ClInclude Include="Estate.h" />
     <ClInclude Include="Flat.h" />
+    <ClInclude Include="HonestBroker.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="kursova.h" />
     <ClInclude Include="Plot.h" />
     <ClInclude Include="RealEstate.h" />
+    <ClInclude Include="SimpleBroker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
