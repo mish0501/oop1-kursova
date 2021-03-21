@@ -146,6 +146,7 @@
     <ClCompile Include="HonestBroker.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="kursova.cpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="Plot.cpp" />
     <ClCompile Include="RealEstate.cpp" />
     <ClCompile Include="SimpleBroker.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="HonestBroker.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="kursova.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="Plot.h" />
     <ClInclude Include="RealEstate.h" />
     <ClInclude Include="SimpleBroker.h" />

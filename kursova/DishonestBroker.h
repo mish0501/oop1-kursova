@@ -7,5 +7,7 @@ public:
 	DishonestBroker();
 
 	DishonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates);
+
+	DishonestBroker(const string& Name, const double& Percent, RealEstate* Estates);
 };
 

@@ -27,7 +27,7 @@ public:
 	const double& getPercent() const;
 
 	virtual void addVIP(Estate* estate) = 0;
-	virtual void showVIPs() = 0;
+	virtual void deleteVIP(Estate* estate) = 0;
 
 };
 

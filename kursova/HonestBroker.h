@@ -7,5 +7,7 @@ public:
 	HonestBroker();
 
 	HonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates);
+
+	HonestBroker(const string& Name, const double& Percent, RealEstate* Estates);
 };
 
