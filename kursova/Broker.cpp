@@ -1,7 +1,7 @@
 #include "Broker.h"
 
 Broker::Broker() {
-	name = " Mihail";
+	name = "Mihail";
 	percent = 0.5;
 	estates = new RealEstate();
 }

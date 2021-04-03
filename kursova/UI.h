@@ -11,7 +11,7 @@ class UI
 {
 private:
 	RealEstate* estates;
-	list<Broker*> brokers;
+	vector<Broker*> brokers;
 
 	void loadData();
 
@@ -19,5 +19,7 @@ public:
 	UI();
 
 	void showMainMenu();
+
+	void showSearchMenu(Broker* broker);
 };
 

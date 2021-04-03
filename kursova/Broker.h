@@ -28,6 +28,7 @@ public:
 
 	virtual void addVIP(Estate* estate) = 0;
 	virtual void deleteVIP(Estate* estate) = 0;
-
+	virtual void search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, string estateType) = 0;
+	virtual void printFoundEstates(list<Estate*> found, list<Estate*>* vip = nullptr) = 0;
 };
 

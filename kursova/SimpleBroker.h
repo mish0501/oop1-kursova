@@ -12,5 +12,9 @@ public:
 	void addVIP(Estate* estate);
 
 	void deleteVIP(Estate* estate);
+
+	void search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, string estateType);
+
+	void printFoundEstates(list<Estate*> found, list<Estate*>* vip = nullptr);
 };
 

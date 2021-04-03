@@ -33,6 +33,10 @@ const double& Estate::getSize() const {
 	return size;
 }
 
+const string& Estate::getOwner() const {
+	return owner;
+}
+
 void Estate::setPrice(const int& Price) {
 	price = Price;
 }
@@ -47,4 +51,20 @@ void Estate::setOwner(const string& Owner) {
 
 void Estate::setSize(const double& Size) {
 	size = size;
+}
+
+const int& Estate::getRoom() const {
+	return 0;
+}
+
+const int& Estate::getFloor() const {
+	return 0;
+}
+
+const double& Estate::getYardSize() const {
+	return 0;
+}
+
+bool Estate::operator<(Estate& e) {
+	return price < e.price;
 }

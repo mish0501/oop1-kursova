@@ -1,11 +1,11 @@
 #pragma once
 #include "Broker.h"
 class VIPBroker :
-    public Broker
+	public Broker
 {
 
 protected:
-    RealEstate* vip;
+	RealEstate* vip;
 
 public:
 	VIPBroker();
@@ -17,5 +17,7 @@ public:
 	void addVIP(Estate* estate);
 
 	void deleteVIP(Estate* estate);
+
+	void search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, string estateType);
 };
 

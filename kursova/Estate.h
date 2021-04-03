@@ -22,6 +22,8 @@ public:
 
 	const double& getSize() const;
 
+	const string& getOwner() const;
+
 	void setPrice(const int& Price);
 
 	void setAddress(const string& Address);
@@ -30,6 +32,11 @@ public:
 
 	void setSize(const double& Size);
 
+	bool operator<(Estate& e);
+
 	virtual void printEstate() = 0;
+	virtual const int& getRoom() const;
+	virtual const int& getFloor() const;
+	virtual const double& getYardSize() const;
 };
 

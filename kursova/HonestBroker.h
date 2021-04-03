@@ -9,5 +9,7 @@ public:
 	HonestBroker(const string& Name, const double& Percent, RealEstate* Estates, RealEstate* vipEstates);
 
 	HonestBroker(const string& Name, const double& Percent, RealEstate* Estates);
+
+	void printFoundEstates(list<Estate*> found, list<Estate*>* vip = nullptr);
 };
 
