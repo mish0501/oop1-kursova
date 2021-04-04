@@ -15,6 +15,6 @@ list<Estate*> RealEstate::getEstates() {
 void RealEstate::printEstates() {
 	for (auto estate : estates)
 	{
-		estate->printEstate();
+		estate->printEstate(cout);
 	}
 }

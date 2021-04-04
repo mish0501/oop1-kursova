@@ -217,7 +217,11 @@ inline void UI::showSearchMenu(Broker* broker) {
 			system("cls");
 			break;
 		case 11:
+			system("cls");
+			cout << endl << "Results:" << endl 
+				<< "-------------------------" << endl;
 			broker->search(address, owner, minPrice, maxPrice, size, room, floor, yardSize, comunications, estateType);
+			break;
 		case 12:
 			running = false;
 			system("cls");

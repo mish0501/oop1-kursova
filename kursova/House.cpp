@@ -4,15 +4,15 @@ House::House(string Address, string Owner, int Price, double Size, int Room, int
 	yardSize = YardSize;
 }
 
-void House::printEstate() {
-	cout << "Type: House" << endl
-		<< "Address: " << address << endl
-		<< "Owner: " << owner << endl
-		<< "Price: " << price << endl
-		<< "Size: " << size << endl
-		<< "Room: " << room << endl
-		<< "Floor: " << floor << endl
-		<< "Yard size: " << yardSize << endl
+void House::printEstate(ostream& out) {
+	out << "Type:             House" << endl
+		<< "Address:          " << address << endl
+		<< "Owner:            " << owner << endl
+		<< "Price:            " << price << endl
+		<< "Size:             " << size << endl
+		<< "Room:             " << room << endl
+		<< "Floor:            " << floor << endl
+		<< "Yard size:        " << yardSize << endl
 		<< endl;
 }
 
@@ -22,4 +22,10 @@ void House::setYardSize(const double& YardSize) {
 
 const double& House::getYardSize() const {
 	return yardSize;
+}
+
+ostream& operator<<(ostream& out, House& h) {
+	h.printEstate(out);
+
+	return out;
 }

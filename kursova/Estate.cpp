@@ -72,3 +72,9 @@ const list<string>& Estate::getComunications() const {
 bool Estate::operator<(Estate& e) {
 	return price < e.price;
 }
+
+ostream& operator<<(ostream& out, Estate& e) {
+	e.printEstate(out);
+
+	return out;
+}

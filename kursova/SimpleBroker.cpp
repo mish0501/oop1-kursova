@@ -25,7 +25,7 @@ void SimpleBroker::search(string address, string owner, int minPrice, int maxPri
 			(floor != 0 && estate->getFloor() == floor) ||
 			(yardSize != 0 && estate->getYardSize() == yardSize) ||
 			(comunications != list<string>() && estate->getComunications() == comunications) ||
-			(estateType != "" && typeid(estate).name() == estateType)
+			(estateType != "" && typeid(*estate).name() == "class " + estateType)
 			) {
 			found.push_back(estate);
 		}
@@ -36,6 +36,6 @@ void SimpleBroker::search(string address, string owner, int minPrice, int maxPri
 
 void SimpleBroker::printFoundEstates(list<Estate*> found, list<Estate*>* vip) {
 	for (auto e : found) {
-		cout << e;
+		cout << *e;
 	}
 }

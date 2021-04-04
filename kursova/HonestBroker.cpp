@@ -11,10 +11,10 @@ HonestBroker::HonestBroker(const string& Name, const double& Percent, RealEstate
 
 void HonestBroker::printFoundEstates(list<Estate*> found, list<Estate*>* vip) {
 	for (auto e : *vip) {
-		cout << e;
+		cout << *e;
 	}
 
 	for (auto e : found) {
-		cout << e;
+		cout << *e;
 	}
 }

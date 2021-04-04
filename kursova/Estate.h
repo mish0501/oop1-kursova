@@ -34,7 +34,9 @@ public:
 
 	bool operator<(Estate& e);
 
-	virtual void printEstate() = 0;
+	friend ostream& operator<<(ostream& out, Estate& e);
+
+	virtual void printEstate(ostream& out) = 0;
 	virtual const int& getRoom() const;
 	virtual const int& getFloor() const;
 	virtual const double& getYardSize() const;

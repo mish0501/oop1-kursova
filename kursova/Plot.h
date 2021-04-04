@@ -13,7 +13,7 @@ private:
 public:
 	Plot(string Address, string Owner, int Price, double Size, list<string> comunications, double YardSize);
 
-	void printEstate();
+	void printEstate(ostream& out);
 
 	void setYardSize(const double& YardSize);
 

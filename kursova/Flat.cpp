@@ -5,14 +5,14 @@ Flat::Flat(string Address, string Owner, int Price, double Size, int Room, int F
 	floor = Floor;
 }
 
-void Flat::printEstate() {
-	cout << "Type: Flat" << endl
-		<< "Address: " << address << endl
-		<< "Owner: " << owner << endl
-		<< "Price: " << price << endl
-		<< "Size: " << size << endl
-		<< "Room: " << room << endl
-		<< "Floor: " << floor << endl
+void Flat::printEstate(ostream& out) {
+	out << "Type:             Flat" << endl
+		<< "Address:          " << address << endl
+		<< "Owner:            " << owner << endl
+		<< "Price:            " << price << endl
+		<< "Size:             " << size << endl
+		<< "Room:             " << room << endl
+		<< "Floor:            " << floor << endl
 		<< endl;
 }
 
@@ -30,4 +30,10 @@ const int& Flat::getRoom() const {
 
 const int& Flat::getFloor() const {
 	return floor;
+}
+
+ostream& operator<<(ostream& out, Flat& f) {
+	f.printEstate(out);
+
+	return out;
 }

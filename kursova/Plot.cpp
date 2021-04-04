@@ -6,14 +6,14 @@ Plot::Plot(string Address, string Owner, int Price, double Size, list<string> co
 	yardSize = YardSize;
 }
 
-void Plot::printEstate() {
-	cout << "Type: Plot" << endl
-		<< "Address: " << address << endl
-		<< "Owner: " << owner << endl
-		<< "Price: " << price << endl
-		<< "Size: " << size << endl
-		<< "Yard size: " << yardSize << endl
-		<< "Comunications:" << endl;
+void Plot::printEstate(ostream& out) {
+	out << "Type:             Plot" << endl
+		<< "Address:          " << address << endl
+		<< "Owner:            " << owner << endl
+		<< "Price:            " << price << endl
+		<< "Size:             " << size << endl
+		<< "Yard size:        " << yardSize << endl
+		<< "Comunications:    " << endl;
 
 	list<string> comunications = getComunications();
 
@@ -73,4 +73,10 @@ const list<string>& Plot::getComunications() const {
 	}
 
 	return comunications;
+}
+
+ostream& operator<<(ostream& out, Plot& p) {
+	p.printEstate(out);
+
+	return out;
 }
