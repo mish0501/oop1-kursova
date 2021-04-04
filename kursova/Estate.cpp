@@ -65,6 +65,10 @@ const double& Estate::getYardSize() const {
 	return 0;
 }
 
+const list<string>& Estate::getComunications() const {
+	return list<string>();
+}
+
 bool Estate::operator<(Estate& e) {
 	return price < e.price;
 }

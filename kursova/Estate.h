@@ -38,5 +38,6 @@ public:
 	virtual const int& getRoom() const;
 	virtual const int& getFloor() const;
 	virtual const double& getYardSize() const;
+	virtual const list<string>& getComunications() const;
 };
 

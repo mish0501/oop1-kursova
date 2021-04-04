@@ -22,7 +22,7 @@ void VIPBroker::deleteVIP(Estate* estate) {
 	vip->deleteEstate(estate);
 }
 
-void VIPBroker::search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, string estateType) {
+void VIPBroker::search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, list<string> comunications, string estateType) {
 	list<Estate*> found;
 	for (auto estate : estates->getEstates()) {
 		if (
@@ -34,6 +34,7 @@ void VIPBroker::search(string address, string owner, int minPrice, int maxPrice,
 			(room != 0 && estate->getRoom() == room) ||
 			(floor != 0 && estate->getFloor() == floor) ||
 			(yardSize != 0 && estate->getYardSize() == yardSize) ||
+			(comunications != list<string>() && estate->getComunications() == comunications) ||
 			(estateType != "" && typeid(*estate).name() == "class " + estateType)
 			) {
 			found.push_back(estate);

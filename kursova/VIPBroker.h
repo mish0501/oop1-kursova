@@ -18,6 +18,6 @@ public:
 
 	void deleteVIP(Estate* estate);
 
-	void search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, string estateType);
+	void search(string address, string owner, int minPrice, int maxPrice, double size, int room, int floor, double yardSize, list<string> comunications, string estateType);
 };
 

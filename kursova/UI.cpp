@@ -1,7 +1,7 @@
 #include "UI.h"
 
 void UI::loadData() {
-	House* house = new House("Varna, s.Priselci", "Pavel", 50000, 200.00, 1, 3, 300.00);
+	House* house = new House("Varna, Center", "Pavel", 50000, 200.00, 1, 3, 300.00);
 
 	estates->registerEstate(house);
 
@@ -109,6 +109,7 @@ inline void UI::showSearchMenu(Broker* broker) {
 	int floor = 0;
 	double yardSize = 0;
 	string estateType = "";
+	list<string> comunications;
 	bool running = true;
 
 	do
@@ -123,7 +124,25 @@ inline void UI::showSearchMenu(Broker* broker) {
 		cout << "6. Rooms" << (room != 0 ? " (" + to_string(room) + ")" : "") << endl;
 		cout << "7. Floor" << (floor != 0 ? " (" + to_string(floor) + ")" : "") << endl;
 		cout << "8. Yard Size" << (yardSize != 0 ? " (" + to_string(yardSize) + ")" : "") << endl;
-		cout << "9. Comunications" << endl;
+		cout << "9. Comunications";
+
+		if (comunications != list<string>()) {
+			list<string>::iterator final_iter = comunications.end();
+			--final_iter;
+
+			cout << "(";
+			for (list<string>::iterator c = comunications.begin(); c != comunications.end(); ++c) {
+				cout << *c;
+				if (c != final_iter) {
+					cout << ", ";
+				}
+			}
+			cout << ")" << endl;
+		}
+		else {
+			cout << endl;
+		}
+
 		cout << "10. Estate type" << (estateType != "" ? " (" + estateType + ")" : "") << endl;
 		cout << "-------------------------" << endl;
 		cout << "11. Search" << endl;
@@ -133,9 +152,17 @@ inline void UI::showSearchMenu(Broker* broker) {
 		cin >> choice;
 		switch (choice)
 		{
-		/*case 1:
-			cin >> address;
-			break;*/
+		case 1: {
+			string city, district;
+			cout << endl << "Enter city: ";
+			cin >> city;
+			cout << "Enter district: ";
+			cin >> district;
+
+			address = city + ", " + district;
+			system("cls");
+		}
+			  break;
 		case 2:
 			cout << endl << "Enter owner name: ";
 			cin >> owner;
@@ -171,13 +198,26 @@ inline void UI::showSearchMenu(Broker* broker) {
 			cin >> yardSize;
 			system("cls");
 			break;
+		case 9: {
+			string comunication;
+			char isContinue;
+			do {
+				cout << endl << "Enter comunication: ";
+				cin >> comunication;
+				comunications.push_back(comunication);
+				cout << "Do you want to continue(y or n)? ";
+				cin >> isContinue;
+			} while (isContinue == 'y');
+			system("cls");
+		}
+			  break;
 		case 10:
 			cout << endl << "Enter estate type: ";
 			cin >> estateType;
 			system("cls");
 			break;
 		case 11:
-			broker->search(address, owner, minPrice, maxPrice, size, room, floor, yardSize, estateType);
+			broker->search(address, owner, minPrice, maxPrice, size, room, floor, yardSize, comunications, estateType);
 		case 12:
 			running = false;
 			system("cls");
