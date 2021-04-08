@@ -66,7 +66,7 @@ void UI::showMainMenu() {
 		cout << "+3. Simple Broker   +" << endl;
 		cout << "+4. Exit            +" << endl;
 		cout << "+++++++++++++++++++++" << endl;
-		cout << "Enter your choose: ";
+		cout << "Enter your choice: ";
 
 		cin >> choice;
 
@@ -147,7 +147,7 @@ inline void UI::showSearchMenu(Broker* broker) {
 		cout << "-------------------------" << endl;
 		cout << "11. Search" << endl;
 		cout << "12. Exit" << endl;
-		cout << "Enter your choose: ";
+		cout << "Enter your choice: ";
 
 		cin >> choice;
 		switch (choice)

@@ -7,19 +7,24 @@ Plot::Plot(string Address, string Owner, int Price, double Size, list<string> co
 }
 
 void Plot::printEstate(ostream& out) {
-	out << "Type:             Plot" << endl
-		<< "Address:          " << address << endl
-		<< "Owner:            " << owner << endl
-		<< "Price:            " << price << endl
-		<< "Size:             " << size << endl
-		<< "Yard size:        " << yardSize << endl
-		<< "Comunications:    " << endl;
+	out << setw(10) << setfill(' ') << left << "|Plot"
+		<< "|" << setw(24) << setfill(' ') << left << address
+		<< "|" << setw(14) << setfill(' ') << left << owner
+		<< "|" << setw(9) << setfill(' ') << left << price
+		<< "|" << setw(9) << setfill(' ') << left << size
+		<< "|" << setw(9) << setfill(' ') << left << ""
+		<< "|" << setw(9) << setfill(' ') << left << ""
+		<< "|" << setw(14) << setfill(' ') << left << yardSize
+		<< "|" << setw(19) << setfill(' ') << left;
 
 	list<string> comunications = getComunications();
 
 	for (auto c : comunications) {
 		cout << "  " << c << endl;
 	}
+
+	out << "|" << endl;
+	out << setw(126) << setfill('-') << "" << endl;
 }
 
 void Plot::setYardSize(const double& YardSize) {
