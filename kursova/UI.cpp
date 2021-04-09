@@ -175,7 +175,7 @@ inline void UI::showSearchMenu(Broker* broker) {
 			break;
 		case 4:
 			cout << endl << "Enter price: ";
-			cin >> minPrice;
+			cin >> maxPrice;
 			system("cls");
 			break;
 		case 5:
