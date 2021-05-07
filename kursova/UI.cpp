@@ -91,8 +91,10 @@ void UI::showMainMenu() {
 			break;
 		default:
 			system("cls");
-			cout << "Error!!!";
-			cout << "Press any button!!";
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Error!!!" << endl;
+			cout << "Choose again(between 1-4)!" << endl << endl;
 		}
 
 	} while (choice != 4);
@@ -214,6 +216,14 @@ inline void UI::showSearchMenu(Broker* broker) {
 		case 10:
 			cout << endl << "Enter estate type: ";
 			cin >> estateType;
+
+			if (!estateType.empty())
+			{
+				estateType[0] = std::toupper(estateType[0]);
+
+				for (int i = 1; i < estateType.length(); ++i)
+					estateType[i] = std::tolower(estateType[i]);
+			}
 			system("cls");
 			break;
 		case 11:
@@ -228,9 +238,10 @@ inline void UI::showSearchMenu(Broker* broker) {
 			break;
 		default:
 			system("cls");
-			cout << "Error!!!";
-			cout << "Try again!!" << endl;
-			running = false;
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Error!!!" << endl;
+			cout << "Try again!!" << endl << endl;
 			break;
 
 		}
